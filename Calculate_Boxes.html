@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Calculate Boxes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="errorMessage"></div>
+        <h1 class="title">Fill the fields below with the dimensions of the carton</h1>
+        <div class="formBox">
+            <form id="form">
+                <label for="lengthInput">Length in centimeters </label>
+                <input type="number" step="0.1" id="length" name="lengthInput" required placeholder="Enter the length of the carton in centimeters">
+                <label for="widthInput">Width in centimeters </label>
+                <input type="number" step="0.1" id="width" name="widthInput" required placeholder="Enter the width of the carton in centimeters ">
+                <label for="heightInput">Height in centimeters</label>
+                <input type="number" step="0.1" id="height" name="heightInput" required placeholder="Enter the height of the carton in centimeters ">
+                <button id="calcBtn">Calculate</button>
+            </form>
+            <img src="https://ui-ex.com/images/transparent-background-loading.gif" alt="Loading gif" id="loadingGif">
+            <div class="result">
+                <p>Cartons per length: <span id="numberBoxesLen"></span></p>
+                <p>Cartons per width: <span id="numberBoxesWidth"></span></p>
+                <p>Cartons per height: <span id="numberBoxesHeight"></span></p>
+                <p>Total height: <span id="numberBoxesWidth"></span> cm</p>
+                <p>Boxes per stack: <span id="numberBoxesStack"></span></p>
+                <p>Total number of cartons: <span id="numberOfBoxes"></span></p>
+                <button id="suggestionBtn"><i class="fas fa-exclamation-triangle"></i> Suggestion!</button>
+            </div>
+            <div id="suggestionModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                   
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
